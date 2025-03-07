@@ -17,18 +17,19 @@ public class Soal3 {
         System.out.println("Masukkan Jumlah Tiket : ");
         int jumlahTiket = scanner.nextInt();
 
-        int hargaPerTiket = (hari.equals(weekday)) ? weekend : weekday ;
+        int hargaPerTiket = (hari.equals("weekday")) ? weekday : weekend;
 
         int totalHarga = hargaPerTiket * jumlahTiket;
 
         if (jumlahTiket > 5) {
             double diskon = totalHarga * 0.1;
-            totalHarga -= diskon ;
+            totalHarga -= diskon;
             System.out.println("--------------------------------");
             System.out.println("Total harga (dengan diskon): " + totalHarga);
-        } else
+        } else {
             System.out.println("--------------------------------");
             System.out.println("Total harga (tanpa diskon): " + totalHarga);
-
+        }
+        scanner.close();
     }
 }
